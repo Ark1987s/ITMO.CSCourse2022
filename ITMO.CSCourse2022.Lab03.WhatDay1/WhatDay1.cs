@@ -26,8 +26,7 @@ namespace ITMO.CSCourse2022.Lab03.WhatDay1
             string line = Console.ReadLine();
             int dayNum = int.Parse(line);
             int monthNum = 0;
-            System.Collections.ICollection DaysInMonths
-            = new int[12] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            System.Collections.ICollection DaysInMonths = new int[12] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             foreach (int daysInMonth in DaysInMonths)
             { 
                 if (dayNum <= daysInMonth)
