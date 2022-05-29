@@ -28,14 +28,6 @@ namespace ITMO.CSCourse2022.Lab03.WhatDay3
                 string line=Console.ReadLine();
                 int yearNum=int.Parse(line);
                 bool isLeapYear = (yearNum%4 == 0) && (yearNum%100 != 0 || yearNum%400 == 0);
-                /*    if (isLeapYear)
-                    {
-                        Console.WriteLine("is a leap year");
-                    }
-                    else
-                    {
-                        Console.WriteLine("is not a leap year");
-                    } */
                 int maxDayNum = isLeapYear ? 366 : 365;
                 Console.Write("Please enter a day number between 1 and {0}: ", maxDayNum);
                 line = Console.ReadLine();
