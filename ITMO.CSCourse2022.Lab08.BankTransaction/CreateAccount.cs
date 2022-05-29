@@ -15,6 +15,15 @@ namespace ITMO.CSCourse2022.Lab08.BankTransaction
 			acc2 = new BankAccount(AccountType.Deposit);
 			acc3 = new BankAccount(100);
 			acc4 = new BankAccount(AccountType.Deposit, 500);
+			acc1.Deposit(100);
+			acc1.Withdraw(50);
+			acc2.Deposit(75);
+			acc2.Withdraw(50);
+			acc3.Withdraw(30);
+			acc3.Deposit(40);
+			acc4.Deposit(200);
+			acc4.Withdraw(450);
+			acc4.Deposit(25);
 			Write(acc1);
 			Write(acc2);
 			Write(acc3);
