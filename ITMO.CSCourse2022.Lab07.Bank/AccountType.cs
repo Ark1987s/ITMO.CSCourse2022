@@ -11,5 +11,4 @@ namespace ITMO.CSCourse2022.Lab07.Bank
         Checking,
         Deposit
     }
-
 }

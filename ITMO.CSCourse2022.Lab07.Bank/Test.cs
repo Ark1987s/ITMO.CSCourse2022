@@ -22,6 +22,5 @@ namespace ITMO.CSCourse2022.Lab07.Bank
             Console.WriteLine("{0} {1} {2}", b1.Type(), b1.Number(), b1.Balance());
             Console.WriteLine("{0} {1} {2}", b2.Type(), b2.Number(), b2.Balance());
         }
-
     }
 }
