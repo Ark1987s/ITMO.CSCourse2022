@@ -29,5 +29,5 @@ namespace ITMO.CSCourse2022.Lab06.CreateAccount
         private long accNo;
         private decimal accBal;
         private AccountType accType;
-    }    
+    }
 }
