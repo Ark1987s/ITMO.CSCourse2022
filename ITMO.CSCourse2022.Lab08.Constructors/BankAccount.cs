@@ -18,21 +18,18 @@ namespace ITMO.CSCourse2022.Lab08.Constructors
 			accType = AccountType.Checking;
 			accBal = 0;
 		}
-
 		public BankAccount(AccountType aType)
 		{
 			accNo = NextNumber();
 			accType = aType;
 			accBal = 0;
 		}
-
 		public BankAccount(decimal aBal)
 		{
 			accNo = NextNumber();
 			accType = AccountType.Checking;
 			accBal = aBal;
 		}
-
 		public BankAccount(AccountType aType, decimal aBal)
 		{
 			accNo = NextNumber();
@@ -43,21 +40,17 @@ namespace ITMO.CSCourse2022.Lab08.Constructors
 		{
 			return accNo;
 		}
-
 		public decimal Balance()
 		{
 			return accBal;
 		}
-
 		public string Type()
 		{
 			return accType.ToString();
 		}
-
 		private static long NextNumber()
 		{
 			return nextNumber++;
 		}
 	}
-
 }
