@@ -20,19 +20,17 @@ namespace ITMO.CSCourse2022.Lab05.FileDetails
             {
                 contents[i] = (char)reader.Read();
             }
-       /*     foreach (char ch in contents)
-            {
-                Console.Write(ch);
-            } */
+            Summarize(contents);
+            reader.Close();
         }
         static void Summarize(char[] contents)
         {
             int vowels = 0, consonants = 0, lines = 0;
             foreach (char current in contents)
             {
-                if(Char.IsLetter(current))
+                if (Char.IsLetter(current))
                 {
-                    if("AEIOUaeiou".IndexOf(current) !=-1)
+                    if ("AEIOUaeiou".IndexOf(current) != -1)
                     {
                         vowels++;
                     }
@@ -41,8 +39,8 @@ namespace ITMO.CSCourse2022.Lab05.FileDetails
                         consonants++;
                     }
                 }
-                else 
-                    if(current == '\n')
+                else
+                    if (current == '\n')
                 {
                     lines++;
                 }

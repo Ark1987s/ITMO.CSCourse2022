@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2022.Lab10.Ban
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2022.Lab10.Banking", "ITMO.CSCourse2022.Lab10.Banking\ITMO.CSCourse2022.Lab10.Banking.csproj", "{511BEC44-DE2A-446E-A485-5C2A2EE916D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2022.Lab09.ColorToken", "ITMO.CSCourse2022.Lab09.ColorToken\ITMO.CSCourse2022.Lab09.ColorToken.csproj", "{DF982EA4-3C80-46DA-848E-2838E55132DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{511BEC44-DE2A-446E-A485-5C2A2EE916D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{511BEC44-DE2A-446E-A485-5C2A2EE916D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{511BEC44-DE2A-446E-A485-5C2A2EE916D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF982EA4-3C80-46DA-848E-2838E55132DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF982EA4-3C80-46DA-848E-2838E55132DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF982EA4-3C80-46DA-848E-2838E55132DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF982EA4-3C80-46DA-848E-2838E55132DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
