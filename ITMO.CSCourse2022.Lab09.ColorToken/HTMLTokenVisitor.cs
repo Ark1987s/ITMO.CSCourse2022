@@ -6,38 +6,38 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2022.Lab09.ColorToken
 {
-    public class HTMLTokenVisitor : NullTokenVisitor
+    public sealed class HTMLTokenVisitor : ITokenVisitor
     {
-        public override void Visit(ILineStartToken line)
+        public void Visit(ILineStartToken line)
         {
             Console.Write("<span class=\"line_number\">");
             Console.WriteLine("{0,3}", line.Number());
             Console.WriteLine("/<span>");
         }
-        public override void Visit(ILineEndToken t)
+        public void Visit(ILineEndToken t)
         {
             Console.WriteLine();
         }
-        public override void Visit(IIdentifierToken token)
+        public void Visit(IIdentifierToken token)
         {
-            Console.Write(token.ToString());
+            SpannedFilteredWrite("identifier", token);
         }
 
-        public override void Visit(ICommentToken token)
+        public void Visit(ICommentToken token)
+        {
+            SpannedFilteredWrite("comment", token);
+        }
+        public void Visit(IKeywordToken token)
+        {
+            SpannedFilteredWrite("keyword", token);
+        }
+        public void Visit(IWhiteSpaceToken token)
         {
             Console.Write(token.ToString());
         }
-        public override void Visit(IKeywordToken token)
+        public void Visit(IOtherToken token)
         {
-            Console.Write(token.ToString());
-        }
-        public override void Visit(IWhiteSpaceToken token)
-        {
-            Console.Write(token.ToString());
-        }
-        public override void Visit(IOtherToken token)
-        {
-            Console.Write(token.ToString());
+            FilteredWrite(token);
         }
         private void FilteredWrite(IToken token)
         {
@@ -58,6 +58,16 @@ namespace ITMO.CSCourse2022.Lab09.ColorToken
                 }
                 Console.Write(dst);
             }
+        }
+        private void SpannedFilteredWrite(string spanName, IToken token)
+        {
+            Console.Write("<span class=\"{0}\">", spanName);
+            FilteredWrite(token);
+            Console.Write("</span>");
+        }
+        public void Visit(IDirectiveToken token)
+        {
+            SpannedFilteredWrite("directive", token);
         }
     }
 }
